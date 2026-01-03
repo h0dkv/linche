@@ -115,3 +115,43 @@ function spawnFloaters() {
     setTimeout(() => span.remove(), 4000);
   }
 }
+
+const smileMessages = [
+  "Hey Lina 💛 I hope this helped even a little 😊",
+  "You’re doing better than you think 🌸",
+  "Just a tiny reminder: you matter 💖",
+  "I’m rooting for you — always ✨"
+];
+
+function smileBoost() {
+  const screen = screens[index];
+  const msg = document.getElementById("heartMsg");
+
+  screen.classList.add("smile");
+
+  if (navigator.vibrate) navigator.vibrate([30, 40, 30]);
+
+  spawnFloaters();
+
+  // 🔊 PLAY SOUND
+  smileSound.currentTime = 0;
+  smileSound.play();
+
+  msg.innerText =
+    smileMessages[Math.floor(Math.random() * smileMessages.length)];
+
+  setTimeout(() => {
+    screen.classList.remove("smile");
+  }, 600);
+}
+
+const smileSound = document.getElementById("smileSound");
+smileSound.volume = 0.25; // soft & gentle
+
+let soundOn = true;
+const muteBtn = document.getElementById("muteBtn");
+
+muteBtn.addEventListener("click", () => {
+  soundOn = !soundOn;
+  muteBtn.innerText = soundOn ? "🔊" : "🔇";
+});

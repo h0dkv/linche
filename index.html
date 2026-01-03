@@ -30,12 +30,16 @@
       </div>
     </section>
 
-    <!-- Screen 3 -->
     <section class="screen">
       <h2 id="moodText"></h2>
       <p>Tap the heart a few times 💖</p>
+
       <div id="heart" onclick="tapHeart()">❤️</div>
       <p id="heartMsg">Go on…</p>
+
+      <!-- NEW BUTTON -->
+      <button onclick="smileBoost()">Press if you need a smile 😊</button>
+
       <button onclick="next()">Next →</button>
     </section>
 
@@ -78,8 +82,14 @@
 
     </div>
 
+    <button id="muteBtn">🔊</button>
+
+
   </div>
 
+  <audio id="smileSound" preload="auto">
+    <source src="https://cdn.jsdelivr.net/gh/naptha/tiny-sounds/pop.mp3" type="audio/mpeg">
+  </audio>
   <script src="script.js"></script>
 </body>
 
