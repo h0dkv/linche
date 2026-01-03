@@ -1,71 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>For you</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<div id="app">
+  <div id="app">
 
-  <!-- Screen 1 -->
-  <section class="screen active">
-    <h1>Hey Lina 💕</h1>
-    <p>I made something fun<br>just for you</p>
-    <button onclick="next()">Tap 💌</button>
-  </section>
+    <!-- Screen 1 -->
+    <section class="screen active">
+      <h1>Hey Lina 💕</h1>
+      <p>I made something fun<br>just for you</p>
+      <button onclick="next()">Tap 💌</button>
+    </section>
 
-  <!-- Screen 2 -->
-  <section class="screen">
-    <h2>Quick question 😄</h2>
-    <p>How are you feeling right now?</p>
-    <div class="options">
-      <button onclick="mood('happy')">😊 Happy</button>
-      <button onclick="mood('okay')">🙂 Okay</button>
-      <button onclick="mood('tired')">😴 Tired</button>
-    </div>
-  </section>
+    <!-- Screen 2 -->
+    <section class="screen">
+      <h2>Quick question 😄</h2>
+      <p>How are you feeling right now?</p>
+      <div class="options">
+        <button onclick="mood('happy')">😊 Happy</button>
+        <button onclick="mood('okay')">🙂 Okay</button>
+        <button onclick="mood('tired')">😴 Tired</button>
+      </div>
+    </section>
 
-  <!-- Screen 3 -->
-  <section class="screen">
-    <h2 id="moodText"></h2>
-    <p>Tap the heart a few times 💖</p>
-    <div id="heart" onclick="tapHeart()">❤️</div>
-    <p id="heartMsg">Go on…</p>
-    <button onclick="next()">Next →</button>
-  </section>
+    <!-- Screen 3 -->
+    <section class="screen">
+      <h2 id="moodText"></h2>
+      <p>Tap the heart a few times 💖</p>
+      <div id="heart" onclick="tapHeart()">❤️</div>
+      <p id="heartMsg">Go on…</p>
+      <button onclick="next()">Next →</button>
+    </section>
 
-  <!-- Screen 4 -->
-  <section class="screen">
-    <h2>Choose one 👀</h2>
-    <div class="options">
-      <button onclick="choice('cute')">Something cute</button>
-      <button onclick="choice('funny')">Something fun</button>
-      <button onclick="choice('sweet')">Something sweet</button>
-    </div>
-  </section>
+    <!-- Screen 4 -->
+    <section class="screen">
+      <h2>Choose one 👀</h2>
+      <div class="options">
+        <button onclick="choice('cute')">Something cute</button>
+        <button onclick="choice('funny')">Something fun</button>
+        <button onclick="choice('sweet')">Something sweet</button>
+      </div>
+    </section>
 
-  <!-- Screen 5 -->
-  <section class="screen">
-    <h2 id="choiceText"></h2>
-    <button onclick="next()">Continue 💫</button>
-  </section>
+    <!-- Screen 5 -->
+    <section class="screen">
+      <h2 id="choiceText"></h2>
+      <button onclick="next()">Continue 💫</button>
+    </section>
 
-  <!-- Screen 6 -->
-  <section class="screen">
-    <h2>Final thing 💕</h2>
-    <p>
-      I just wanted you to know<br>
+    <!-- Screen 6 -->
+    <section class="screen">
+      <h2>Final thing 💕</h2>
+      <p>
+        I just wanted you to know<br>
         that you're amazing and
         i feel comfortable around you<br>
-    </p>
-    <button onclick="restart()">Replay 🔁</button>
-  </section>
+      </p>
+      <button onclick="restart()">Replay 🔁</button>
+    </section>
 
-</div>
+    <button id="cheerBtn">Cheer me up 💛</button>
 
-<script src="script.js"></script>
+    <div id="cheerOverlay">
+      <div class="cheerBox">
+        <h2>Hey Lina 🌼</h2>
+        <p id="cheerText"></p>
+        <button onclick="closeCheer()">That helped 😊</button>
+      </div>
+      <div class="floaters"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
